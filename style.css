@@ -1,0 +1,505 @@
+/* This bit is for css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+    font-family: "Epilogue", sans-serif;
+}
+/* Below is where the style begins */
+
+html {
+    font-family: "Epilogue", sans-serif;
+}
+
+body {
+    overflow: auto;
+    margin:auto;
+    width: max-content;
+}
+
+#main {
+    overflow: hidden;
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 475px;
+    height: auto;
+    max-height: 700px;
+}
+
+#menu-container {
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    max-width: 238px;
+    height: 500px;
+    background-color: white;
+    transform: translateX(+100%);
+}
+
+#menu-pc {
+    display: none;
+}
+
+#exit-container {
+    width: 100%;
+    max-width: 234px;
+}
+
+#close-menu {
+    max-width: 50px;
+    align-self: baseline;
+    float: right;
+    margin-right: 20px;
+}
+
+.list {
+    font-weight: 500;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    color: hsl(0, 0%, 41%);
+}
+
+#features-items {
+    display: none;
+    flex-direction: column;
+}
+
+.features-item:nth-child(1) {
+    margin-top: 10%;
+}
+
+.features-item {
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+.features-icon {
+    margin-right: 3%;
+}
+
+#company-items {
+    display: none;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.company-item {
+    margin-bottom: 10%;
+}
+
+#button-containers {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#login {
+    border: thin solid gray;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    padding: 10px 0;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+#register {
+    border: thin solid gray;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    padding: 10px 0;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#logo-container {
+    width: 50%;
+    max-width: 237px;
+}
+
+#menu-logo-container {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    max-width: 237px;
+}
+
+#image-container {
+    margin-top: 5%;
+    width: 100%;
+    max-width: 475px;
+    height: auto;
+}
+
+#logo-mobile {
+    display: flex;
+    width: 100%;
+    max-width: 475px;
+}
+
+#logo-desktop {
+    display: none;
+}
+
+#logos-pc {
+    display: none;
+}
+
+#text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5%;
+    width: 70%;
+}
+
+#title {
+    font-size: 33px;
+    font-weight: 700;
+}
+
+#text {
+    color: hsl(0, 0%, 41%);
+    margin-top: 3%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#learn {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+}
+
+#logos {
+    margin: 5% auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 475px;
+}
+
+.logo {
+    width: 70px;
+}
+@media(min-width: 500px) {
+
+    #main {
+        overflow-x: hidden;
+        z-index: 1;
+        width: auto;
+        max-width: none;
+        max-height: none;
+        flex-direction: column;
+    }
+
+    #top {
+        position: relative;
+        z-index: 998;
+        width: 100%;
+        height: 100px;
+        margin-top: 2%;
+    }
+
+    #logo-container {
+        margin-left: 20px;
+        width: 100px;
+    }
+
+    #menu-pc {
+        z-index: -3;
+        display: flex;
+        margin-top: 5px;
+        width: 80%;
+        height: auto;
+    }
+
+    #pc-list-items {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    #pc-features {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pc-first-arrow {
+        position: relative;
+        top: -17px;
+        left: 70px;
+        width: 10px;
+        height: 10px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    #pc-features-items {
+        position: absolute; /* Ensure it's positioned absolutely */
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Add a box shadow for visibility */
+        z-index: 999; /* Ensure a high z-index value */
+        display: none; /* Initially hide the menu */
+        padding: 5px;
+        border-radius: 5px;
+        width: 120px;
+        top: 30px;
+    }
+
+    #pc-features:hover {
+        cursor: pointer;
+    }
+
+    #pc-features:hover #pc-features-items {
+        display: block; /* Show the menu on hover */
+    }
+
+    #pc-company {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pc-company-items {
+        position: absolute; /* Ensure it's positioned absolutely */
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Add a box shadow for visibility */
+        z-index: 999; /* Ensure a high z-index value */
+        display: none; /* Initially hide the menu */
+        padding: 10px;
+        border-radius: 5px; 
+        top: 30px;
+    }
+
+    #pc-company:hover {
+        cursor: pointer;
+    }
+
+    #pc-company:hover #pc-company-items {
+        display: block; /* Show the menu on hover */
+        cursor: pointer;
+    }
+
+    #pc-second-arrow {
+        position: relative;
+        top: -17px;
+        left: 75px;
+        width: 10px;
+        height: 10px;
+        margin-top: 3px;
+        margin-left: 5px;
+    }
+
+    #pc-button-containers {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .list {
+        margin-left: 5%;
+    }
+
+    .list:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    #pc-button-containers {
+        width: auto;
+        height: 200px;
+    }
+
+    #pc-login {
+        border: none;
+        font-weight: 700;
+        background-color: white;
+        color: hsl(0, 0%, 41%);
+        border-radius: 10px;
+        margin-right: 50px;
+        width: 100px;
+        height: 30px;
+        padding: 10px 20px 25px 20px;
+    }
+
+    #pc-login:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    #pc-register {
+        border: thin solid gray;
+        background-color: white;
+        color: hsl(0, 0%, 41%);
+        font-weight: 700;
+        border-radius: 10px;
+        margin-right: 50px;
+        width: 100px;
+        height: 30px;
+        padding: 10px 20px 25px 20px;        
+    }
+
+    #pc-register:hover {
+        color: black;
+        border: thin solid black;
+        cursor: pointer;
+    }
+
+    #menu-logo {
+        display: none;
+    }
+
+    #menu-logo-container {
+        display: none;
+    }
+    
+    #menu-container {
+        display: none;
+    }
+
+    #middle-part {
+        width: 80%;
+        height: auto;
+        position: relative;
+        z-index: 999;
+        max-height: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #text-container {
+        align-items: normal;
+        justify-content: baseline;
+        align-self: normal;
+        text-align: left;
+        margin-right: 5%;
+        width: 50%;
+        height: auto;
+        max-height: 800px;
+    }
+
+    #title{
+        width: 58%;
+        font-size: 55px;
+    }
+
+    #text {
+        width: 80%;
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+    #learn {
+        width: 150px;
+    }
+
+    #learn:hover {
+        cursor: pointer;
+        border: thin solid black;
+        background-color: white;
+        color: black;
+    } 
+
+    #image-container {
+        width: 50%;
+        height: auto;
+        max-width: none;
+        max-height: 800px;
+    }
+
+    #logo-mobile {
+        display: none;
+    }
+
+    #logo-desktop {
+        display: flex;
+        width: auto;
+        max-width: 700px;
+        height: auto;
+        max-height: 700px;
+    }
+
+    #logos-pc {
+        margin: 0% 3%;
+        position: relative;
+        top: 190px;
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        max-width: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    #logos {
+        display: none;
+    }
+
+}
